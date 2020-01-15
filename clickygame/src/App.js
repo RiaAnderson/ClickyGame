@@ -3,6 +3,8 @@ import './styles.css';
 
 class App extends Component {
   state={
+    clickedActors: [],
+    Score: [],
     actors:[
       {
         images: require ("./images/Alexis.jpg"),
@@ -54,15 +56,32 @@ class App extends Component {
       }
     ]
   }
+
+  onClick = (id) =>{
+    let {clickedActors, score} = this.state;
+    if (clickedActors.includes(id)){
+      console.log("lost")
+      clickedActors = []
+      score = 0
+    } else {
+      score++
+      clickedActors.push(id)
+    }
+    
+    this.setState({
+      clickedActors,
+      score
+    })
+  }
   
   render() {
-
+console.log(this.state)
   return (
     <div className="App">
       <h1>Schitt's Creek Memory Game</h1>
       <p>Click all the cast members to score points, but don't click on a cast member more than once.</p>
       <div className="cast">
-      {this.state.actors.map(actor => <img key={actor.id} src={actor.images} alt="cast member" />)}
+      {this.state.actors.map(actor => <img onClick= {() =>this.onClick(actor.id)} key={actor.id} src={actor.images} alt="cast member" />)}
       </div>
       
       
