@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './styles.css';
 import actors from "./actors.json";
+import ActorCard from "./components/ActorCard/ActorCard.js";
 
 
 class App extends Component {
@@ -47,6 +48,8 @@ console.log(this.state)
     <div className="App">
       <h1>Schitt's Creek Memory Game</h1>
       <p>Click all the cast members to score points, but don't click on a cast member more than once.</p>
+      <p className = "score"><strong>Score: {this.score} </strong></p>
+      {/* <p className = "message"><strong>{props.message}</strong></p> */}
       <div className="cast">
       {this.state.actors.map(actor => <img onClick= {() =>this.onClick(actor.id)} key={actor.id} src={actor.images} alt="cast member" />)}
       </div>
