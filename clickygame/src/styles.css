@@ -8,12 +8,12 @@ body {
     text-align: center;
   }
 
-.app {
+/* .app {
     color: #F4DECB;
-}
+} */
 
 .cast img{
 height: 200px;
 width: 200px;
-padding: 30;
+padding: 15px;
 }
