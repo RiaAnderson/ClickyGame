@@ -1,0 +1,50 @@
+[
+    {
+      "images": "../images/Alexis.jpg",
+      "id": 1
+    },
+    {
+      "images": "../images/David.jpg",
+      "id": 2
+    },
+    {
+      "images": "../images/Jocelyn.jpg",
+      "id": 3
+    },
+    {
+      "images": "../images/Johnny.jpg",
+      "id": 4
+    },
+    {
+      "images": "../images/Moira.jpg",
+      "id": 5
+    },
+    {
+      "images": "../images/Mutt.jpg",
+      "id": 6
+    },
+    {
+      "images": "../images/Patrick.jpg",
+      "id": 7
+    },
+    {
+      "images": "../images/Roland.jpg",
+      "id": 8
+    },
+    {
+      "images": "../images/Ronnie.jpg",
+      "id": 9
+    },
+    {
+      "images": "../images/Stevie.jpg",
+      "id": 10
+    },
+    {
+      "images": "../images/Ted.jpg",
+      "id": 11
+    },
+    {
+      "images": "../images/Twyla.jpeg",
+      "id": 12
+    }
+  ]

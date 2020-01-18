@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import './styles.css';
 
+
 class App extends Component {
   state={
     clickedActors: [],
     Score: [],
+    roundEnd: false,
     actors:[
       {
         images: require ("./images/Alexis.jpg"),
@@ -58,19 +60,32 @@ class App extends Component {
   }
 
   onClick = (id) =>{
-    let {clickedActors, score} = this.state;
+    let {clickedActors, score, actors} = this.state;
     if (clickedActors.includes(id)){
-      console.log("lost")
+      console.log("you lost")
       clickedActors = []
       score = 0
     } else {
       score++
       clickedActors.push(id)
     }
+
+    let actorCount = actors.length;
+    let actorSelected;
+    let temp;
+
+    while (actorCount > 11) {
+      actorSelected = Math.floor(Math.random() === actorCount);
+      actorCount--;
+      temp = actors[actorCount];
+      actors[actorCount] = actors[actorSelected];
+      actors[actorSelected] = temp;
+    }
     
     this.setState({
       clickedActors,
-      score
+      score,
+      actors
     })
   }
   
@@ -83,6 +98,11 @@ console.log(this.state)
       <div className="cast">
       {this.state.actors.map(actor => <img onClick= {() =>this.onClick(actor.id)} key={actor.id} src={actor.images} alt="cast member" />)}
       </div>
+      <footer className = "footer">
+        <div className = "container">
+          <span className="text-muted">© Ria Anderson 2020</span>
+        </div>
+      </footer>
       
       
     </div>
