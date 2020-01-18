@@ -4,8 +4,8 @@ import "./ActorCard.css";
 function ActorCard(props) {
   return (
     <div className="card">
-      <div className="img-container">
-        <img className="img-thumbnail img-responsive" src={this.image} onClick={() => this.clickPicture(this.id)}/>
+      <div className="container">
+        <img className="image" src={this.image} onClick={() => this.clickPicture(this.id)}/>
       </div>
     </div>
   );

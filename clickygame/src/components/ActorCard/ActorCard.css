@@ -9,16 +9,9 @@
     text-align: left;
   }
   
-  .card > .img-container {
-    height: 100%;
-    overflow: hidden;
-    background:#6CADDC;
-  }
-  .card > .img-container > img {
-    width: 60%
-  }  
+
   
-  .img-container:hover {
+  .container:hover {
     opacity: 0.5;
   }
   
